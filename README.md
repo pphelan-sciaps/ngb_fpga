@@ -33,9 +33,11 @@ TODO
 * FPGA toolchain: Radiant 3.2.0.8
 
 ## Project Setup
-* install required tools
+* setup and update os
 * clone project git repo
-* TODO python setup steps
+
+### Python Setup
+I use [pipenv](https://pipenv.pypa.io/en/latest/index.html) to manage python dependencies and virtual environments with minimal overhead thinking.
 
 ## Running Simulations
 ### Module Level
