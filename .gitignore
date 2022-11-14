@@ -1,3 +1,7 @@
+## vunit
+**/vunit_out
+
+## python
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
