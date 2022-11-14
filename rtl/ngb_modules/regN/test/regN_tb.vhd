@@ -9,7 +9,8 @@
 ---- standard library ----
 library IEEE;
 use IEEE.std_logic_1164.all;
--- use IEEE.numeric_std.all;
+use IEEE.numeric_std.all;
+use IEEE.numeric_std_unsigned.all;
 use IEEE.std_logic_textio.all;
 
 ---- system ----
@@ -24,7 +25,10 @@ library ngb_lib;
 
 -------- regN_tb --------
 entity regN_tb is
-    generic (runner_cfg : string);
+generic (
+    runner_cfg : string;
+    stim_din : integer
+);
 end regN_tb;
 
 architecture tb of regN_tb is
@@ -46,16 +50,46 @@ begin
 
     ---- stimulus ----
     proc_stim : process
+        variable test_idx : integer := 0;
+
+        procedure write_check (constant wr_val : in integer) is
+        begin
+            -- set values
+            wr_en <= '1';
+            din <= std_logic_vector(to_unsigned(wr_val, C_REG_WIDTH));
+
+            -- wait
+            wait until rising_edge(clk);
+            wait for 10 ps;
+
+            -- check
+            check_equal(dout, din, "write check");
+
+            -- clean up
+            wr_en <= '0';
+
+        end procedure write_check;
     begin
         -- test setup
         test_runner_setup(runner, runner_cfg);
+        report runner_cfg;
+        -- report integer'image(stim_din);
+        wait until rising_edge(rst_n);
+        wait until rising_edge(clk);
 
         -- test lopp
-        report "Hello World!";
-        wait for 100 ns;
-        report "end of test";
+        while test_suite loop
+            if run ("write_test") then
+                write_check(stim_din);
+            -- elsif run("no_write_test") then
+            --     report "no write";
+            end if;
+
+            -- end if;
+        end loop;
 
         -- end of test
+        wait for CLK_100M_PER;
         test_runner_cleanup(runner);
 
     end process;
