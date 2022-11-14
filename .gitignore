@@ -1,5 +1,7 @@
 ########    GENERAL     ########
 
+########    VUNIT       ########
+**/vunit_out
 
 ########    PYTHON      ########
 # Byte-compiled / optimized / DLL files
