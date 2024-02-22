@@ -21,9 +21,9 @@ TODO
 # Getting Started
 ## Directory Structure
 [docs](/docs/README.md) - project documentation\
-[refs](/refs/README.md) - reference material\
 [rtl](/rtl/README.md) - module and top level design and implementation\
 [scripts](/scripts/README.md) - scripts used to setup the project, run simulations, build, etc
+[sim](/sim/README.md) - simulation
 
 ## Project Environment
 * OS: ubuntu 20.04 on [WSL2](https://learn.microsoft.com/en-us/windows/wsl/about), Win 11 host
