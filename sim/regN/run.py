@@ -3,9 +3,10 @@ from pathlib import Path
 from vunit import VUnit
 
 # source and tb paths
-ROOT = Path(__file__).resolve().parent
-DUT_PATH = ROOT / "src"
-TEST_PATH = ROOT / "test"
+DIR = ROOT = Path(__file__).resolve().parent
+ROOT = DIR.parent.parent
+DUT_PATH = ROOT / "sources/rtl"
+TEST_PATH = DIR / "test"
 WAVE_FILE = "waves/wave.do"
 FILE_EXT = "*.vhd"
 
