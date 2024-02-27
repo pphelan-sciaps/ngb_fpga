@@ -1,0 +1,40 @@
+# imports
+from pathlib import Path
+from vunit import VUnit
+
+# source and tb paths
+DIR = ROOT = Path(__file__).resolve().parent
+ROOT = DIR.parent.parent
+DUT_PATH = ROOT / "sources/rtl"
+TEST_PATH = DIR
+WAVE_FILE = "waves/wave.do"
+FILE_EXT = "*.vhd"
+
+# create vunit instance
+VU = VUnit.from_argv()
+VU.enable_location_preprocessing()
+
+# design library and files
+ngb_lib = VU.add_library("ngb_lib")
+ngb_lib.add_source_files([DUT_PATH / FILE_EXT])
+
+# testbench library and files
+tb_lib = VU.add_library("tb_lib")
+tb_lib.add_source_files([TEST_PATH / FILE_EXT])
+
+# wave file
+# VU.set_sim_option("modelsim.init_file.gui", WAVE_FILE)
+
+# test configuration
+tb = tb_lib.test_bench("ngb_top_certus_nx_versa_eval_tb")
+
+# for test in tb.get_tests():
+#     for val in TEST_VALUES:
+#         test.add_config(
+#             name=f"write_test val={val}",
+#             generics={"stim_din":val}
+#         )
+    # print(f"{test.name}")
+
+# run
+VU.main()
