@@ -2,7 +2,10 @@
 <RadiantProject version="4.2" radiant="2023.1.1.200.1" title="ngb_cnx_evk" device="LFD2NX-40-8BG256C" performance_grade="8_High-Performance_1.0V" default_implementation="impl_1">
     <Options/>
     <Implementation title="impl_1" dir="impl_1" description="impl_1" synthesis="synplify" default_strategy="Strategy1">
-        <Options/>
+        <Options def_top="ngb_top_cnx_evk"/>
+        <Source name="../../../sources/rtl/ngb_top_cnx_evk.vhd" type="VHDL" type_short="VHDL">
+            <Options top_module="ngb_top_cnx_evk"/>
+        </Source>
     </Implementation>
     <Strategy name="Strategy1" file="ngb_cnx_evk1.sty"/>
 </RadiantProject>
