@@ -41,8 +41,7 @@ begin
   ---- blinky ----
   proc_led_n : process
     constant COUNT_MAX  : integer   := G_BLINK_COUNT-1;
-
-    variable count : integer range 0 to COUNT_MAX := COUNT_MAX;
+    variable count : integer range 0 to COUNT_MAX;
   begin
     wait until rising_edge(ipin_clk_100M);
     if (not ipin_rst_n) then

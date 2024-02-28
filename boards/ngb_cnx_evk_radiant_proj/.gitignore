@@ -3,6 +3,9 @@
 /*
 !.gitignore
 
+# board specific sources
+!constraints/
+
 # radiant project
 !ngb_cnx_evk/
 ngb_cnx_evk/*
