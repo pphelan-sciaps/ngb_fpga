@@ -12,3 +12,6 @@ ngb_cnx_evk/*
 
 !*.sty
 !*.rdf
+
+# outputs
+!programming/

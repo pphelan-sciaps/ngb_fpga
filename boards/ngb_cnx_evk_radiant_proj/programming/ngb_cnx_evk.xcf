@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE		ispXCF	SYSTEM	"IspXCF.dtd" >
+<ispXCF version="R2023.1">
+	<Comment></Comment>
+	<Chain>
+		<Comm>JTAG</Comm>
+		<Device>
+			<SelectedProg value="TRUE"/>
+			<Pos>1</Pos>
+			<Vendor>Lattice</Vendor>
+			<Family>LFD2NX</Family>
+			<Name>LFD2NX-40</Name>
+			<IDCode>0x310f1043</IDCode>
+			<Package>All</Package>
+			<PON>LFD2NX-40</PON>
+			<Bypass>
+				<InstrLen>8</InstrLen>
+				<InstrVal>11111111</InstrVal>
+				<BScanLen>1</BScanLen>
+				<BScanVal>0</BScanVal>
+			</Bypass>
+			<File>../ngb_cnx_evk_impl_1.bit</File>
+			<FileTime>02/28/24 13:47:55</FileTime>
+			<JedecChecksum>N/A</JedecChecksum>
+			<MemoryType>Static Random Access Memory (SRAM)</MemoryType>
+			<Operation>Fast Configuration</Operation>
+			<Option>
+				<SVFVendor>JTAG STANDARD</SVFVendor>
+				<IOState>HighZ</IOState>
+				<PreloadLength>362</PreloadLength>
+				<IOVectorData>0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</IOVectorData>
+				<OverideUES value="TRUE"/>
+				<TCKFrequency>1.000000 MHz</TCKFrequency>
+				<SVFProcessor>ispVM</SVFProcessor>
+				<Usercode>0x00000000</Usercode>
+				<AccessMode>Direct Programming</AccessMode>
+			</Option>
+		</Device>
+	</Chain>
+	<ProjectOptions>
+		<Program>SEQUENTIAL</Program>
+		<Process>ENTIRED CHAIN</Process>
+		<OperationOverride>No Override</OperationOverride>
+		<StartTAP>TLR</StartTAP>
+		<EndTAP>TLR</EndTAP>
+		<VerifyUsercode value="FALSE"/>
+		<TCKDelay>3</TCKDelay>
+	</ProjectOptions>
+	<CableOptions>
+		<CableName>USB2</CableName>
+		<PortAdd>FTUSB-0</PortAdd>
+		<USBID>DUAL RS232-HS A Location 0000 Serial DUAL RS232-HS A</USBID>
+		<JTAGPinSetting>
+			TRST	ABSENT;
+			ISPEN	ABSENT;
+		</JTAGPinSetting>
+	</CableOptions>
+</ispXCF>
