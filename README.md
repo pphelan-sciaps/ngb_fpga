@@ -16,14 +16,14 @@ Next Gen Blinky (NGB) is an FPGA design meant to serve as a reference for future
 TODO
 
 ## Target Hardware
-[Lattice Certus-NX Eval Board](https://www.latticesemi.com/products/developmentboardsandkits/certus_nx_versa_eval)
+[Lattice Certus-NX Eval Board](https://www.latticesemi.com/products/developmentboardsandkits/cnx_evk)
 
 # Getting Started
 ## Directory Structure
 [docs](/docs/README.md) - project documentation\
-[refs](/refs/README.md) - reference material\
 [rtl](/rtl/README.md) - module and top level design and implementation\
 [scripts](/scripts/README.md) - scripts used to setup the project, run simulations, build, etc
+[sim](/sim/README.md) - simulation
 
 ## Project Environment
 * OS: ubuntu 20.04 on [WSL2](https://learn.microsoft.com/en-us/windows/wsl/about), Win 11 host
@@ -33,9 +33,11 @@ TODO
 * FPGA toolchain: Radiant 3.2.0.8
 
 ## Project Setup
-* install required tools
+* setup and update os
 * clone project git repo
-* TODO python setup steps
+
+### Python Setup
+I use [pipenv](https://pipenv.pypa.io/en/latest/index.html) to manage python dependencies and virtual environments with minimal overhead thinking.
 
 ## Running Simulations
 ### Module Level
