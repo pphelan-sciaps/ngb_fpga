@@ -16,7 +16,7 @@ Next Gen Blinky (NGB) is an FPGA design meant to serve as a reference for future
 TODO
 
 ## Target Hardware
-[Lattice Certus-NX Eval Board](https://www.latticesemi.com/products/developmentboardsandkits/certus_nx_versa_eval)
+[Lattice Certus-NX Eval Board](https://www.latticesemi.com/products/developmentboardsandkits/cnx_evk)
 
 # Getting Started
 ## Directory Structure

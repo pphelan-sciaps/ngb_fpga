@@ -26,7 +26,7 @@ tb_lib.add_source_files([TEST_PATH / FILE_EXT])
 # VU.set_sim_option("modelsim.init_file.gui", WAVE_FILE)
 
 # test configuration
-tb = tb_lib.test_bench("ngb_top_certus_nx_versa_eval_tb")
+tb = tb_lib.test_bench("ngb_top_cnx_evk_tb")
 
 # for test in tb.get_tests():
 #     for val in TEST_VALUES:

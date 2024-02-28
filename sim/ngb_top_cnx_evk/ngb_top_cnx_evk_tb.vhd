@@ -24,14 +24,14 @@ context vunit_lib.vunit_context;
 library ngb_lib;
 
 -------- regN_tb --------
-entity ngb_top_certus_nx_versa_eval_tb is
+entity ngb_top_cnx_evk_tb is
 generic (
     runner_cfg : string;
     G_BLINK_COUNT : integer := 10
 );
-end ngb_top_certus_nx_versa_eval_tb;
+end ngb_top_cnx_evk_tb;
 
-architecture tb of ngb_top_certus_nx_versa_eval_tb is
+architecture tb of ngb_top_cnx_evk_tb is
     ---- system ----
     CONSTANT CLK_100M_PER : time := 10 ns;
     signal clk : std_logic := '0';
@@ -86,7 +86,7 @@ begin
     end process;
 
     ---- dut ----
-    u_dut : entity ngb_lib.ngb_top_certus_nx_versa_eval
+    u_dut : entity ngb_lib.ngb_top_cnx_evk
     generic map(
         G_BLINK_COUNT   => G_BLINK_COUNT
     )

@@ -17,7 +17,7 @@ library ieee;
   use ieee.std_logic_1164.all;
   use ieee.numeric_std.all;
 
-entity ngb_top_certus_nx_versa_eval is
+entity ngb_top_cnx_evk is
   generic (
     G_BLINK_COUNT : integer := 100_000_000
   );
@@ -28,7 +28,7 @@ entity ngb_top_certus_nx_versa_eval is
   );
 end entity;
 
-architecture rtl of ngb_top_certus_nx_versa_eval is
+architecture rtl of ngb_top_cnx_evk is
   -- output buffers
   signal led_n  : std_logic;
 begin
